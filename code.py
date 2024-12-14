@@ -1,13 +1,27 @@
-print ('How many problems would you like to do')
-e = int(input())
+print ('Welcome to the Ryandw11 calculator, with improvements from Brycerw11.')
+
+print ('How many problems would you like to solve?')
+while True: #Loop until valid int is given
+    try:
+        num_of_problems = int(input())
+        break
+    except:
+        print("Please input a whole number.")
+
 count = 0
-while count < e:
+while count < num_of_problems:
     count = count + 1
-    print ('Welcome to ryandw11 calculator. just put in a prblem')
-    print ('we use 1 =(add) 2 =(subtract) 3 =(mutiply) 4 =(divid) 5 =(area of a trapezoid)')
-    print ('6 =(area of a triangle) 7 =(area of a parallelogram) 8 =(path/curict)')
-    print ('put in a your opration')
-    c = int(input())    #
+    print ('Type 1 for addition; 2 for subtraction; 3 for multiplication; 4 for division;)')
+    print ('5 for area of a Trapezoid; 6 for area of a Triangle; 7 for area of a Parallelogram; 8 for path or circuit')
+    
+    while True:
+        try:
+            c = int(input())
+            if c > 9 or c < 0:
+                break
+        except:
+            print("Please input a valid number.")
+        
     if c == 1:
         print ('Please enter a number')
         num1 = int(input())
